@@ -1,5 +1,5 @@
 pipelines: 
-  - name: checkingValues
+  - name: checkingValues2
     steps:
       - name: checkvals
         type: Bash
