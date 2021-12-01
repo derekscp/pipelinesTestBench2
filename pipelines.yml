@@ -1,0 +1,16 @@
+pipelines: 
+  - name: checkingValues
+    steps:
+      - name: checkvals
+        type: Bash
+        configuration:
+          inputResources:
+            - name: PropBagTest
+              trigger: false
+        execution:
+          onExecute:
+            - echo $current_runid
+            # Writes current run number to pipeline state
+            - add_pipeline_variables prev_runid=$run_id
+            - get-variable -name name
+            - get-variable -name id
