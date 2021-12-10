@@ -6,7 +6,7 @@ pipelines:
         configuration:
           inputResources:
             - name: PropBagTest2
-              trigger: true
+              trigger: false
         execution:
           onExecute:
             - echo $current_runid
