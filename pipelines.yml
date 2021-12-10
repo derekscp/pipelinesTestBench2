@@ -13,5 +13,5 @@ pipelines:
             # Writes current run number to pipeline state
             - add_pipeline_variables prev_runid=$run_id
             #- get-variable -name name
-            - printenv res_PropBagTest_name
+            - printenv res_PropBagTest2_name
             #- get-variable -name id
